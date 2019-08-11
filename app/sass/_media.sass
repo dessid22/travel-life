@@ -1,0 +1,194 @@
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+	.articles
+		grid-template-columns: 1fr
+	.basic-form
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-auto-rows: minmax(30px, 40px)
+		align-content: space-between
+		justify-items: stretch
+		grid-template-areas: "title input1 textarea btn" ". input2 textarea ."
+
+@media only screen and (max-width : 991px)
+	.header-box
+		grid-template-columns: 1fr 1fr
+		&__block:nth-child(3)
+			grid-column: 1 / 3
+	.galery
+		grid-template-columns: 350px 1fr
+		grid-template-rows: 370px 270px 270px
+		&__item:nth-child(1)
+			grid-row: 1 / 4
+		&__item:nth-child(2)
+			grid-column: 2 / 3
+	.stats
+		grid-template-columns: 1fr
+		padding: 40px 20px
+	.info
+		grid-template-columns: 1fr 1fr 1fr
+		grid-row-gap: 40px
+		margin-bottom: 40px
+		justify-items: center
+	.info__item
+		text-align: center
+		align-items: center
+		justify-content: center
+	.info__item:nth-child(4)
+		text-align: center
+		align-items: center
+		justify-content: center
+	.overlay
+		align-items: flex-start
+		justify-content: flex-start
+	.header-box__content
+		bottom: initial
+		top: 50%
+		transform: translateY(-50%)
+	.slider .owl-stage-outer
+		width: initial
+	.slider__item
+		margin-right: initial
+		padding: 60px 70px 60px 70px
+		max-width: 95%
+	.slider__map
+		right: 0
+		z-index: 0
+		top: initial
+		bottom: 40px
+		opacity: .3
+	.slider p
+		width: 100%
+	.slider
+		width: 70%
+	.basic-form
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: "title input1 textarea" ". input2 textarea" ". btn ."
+
+@media only screen and (max-width : 767px)
+	.galery
+		grid-template-columns: 1fr 1fr
+	.galery__content
+		padding: 20px
+	.header
+		grid-template-columns: 1fr
+		grid-template-rows: auto 1fr
+		grid-row-gap: 35px
+	.header-box
+		grid-template-columns: 1fr
+		&__block:nth-child(3)
+			grid-column: 1 / 2
+	.basic-menu__list
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr))
+	.basic-menu__item
+		margin: 0 10px
+		text-align: center
+	.header-box__block
+		min-height: 200px
+	.follow
+		margin: 0 auto
+		max-width: 170px
+	.basic-menu__link::before
+		display: none
+	.info
+		grid-template-columns: 1fr 1fr
+		grid-gap: 0
+		grid-row-gap: 20px
+	.info__item:nth-child(3)
+		grid-column: 1 / 3
+	.all-world
+		grid-template-columns: repeat(4, 1fr)
+	.blog
+		grid-template-columns: 1fr
+		grid-row-gap: 20px
+	.basic-form
+		grid-template-columns: 1fr 1fr
+		grid-auto-rows: minmax(30px, auto)
+		grid-template-areas: "title title" "input1 textarea" "input2 textarea" "btn ."
+
+@media only screen and (max-width : 575px)
+	.galery
+		grid-template-columns: 1fr
+		grid-template-rows: 370px 270px 200px 200px
+		&__item:nth-child(1)
+			grid-row: 1 / 2
+		&__item:nth-child(2)
+			grid-column: 1 / 2
+	.slider__title
+		margin-bottom: 20px
+	.slider p
+		margin-bottom: 20px
+	.slider__item
+		padding: 30px 40px 30px 40px
+	/* TIMELINE */
+	.timeline__list, .timeline__item
+		width: auto
+	.timeline__list
+		padding: 0
+		transform: none !important
+	.timeline__item
+		display: block
+		height: auto
+		background: transparent
+		border-top: none
+	.timeline__item:first-child
+		margin-top: 25px
+	.timeline__item:not(:first-child)
+		margin-left: auto
+	.timeline__content
+		width: 91%
+		height: auto !important
+		margin: 0 auto 25px
+	.timeline__content
+		position: static
+	.timeline__item:nth-child(odd) .timeline__content
+		transform: none
+	.timeline__item:nth-child(odd) .timeline__content::before,
+	.timeline__item:nth-child(even) .timeline__content::before
+		left: 50%
+		top: 100%
+		transform: translateX(-50%)
+		border: none
+		border-left: 1px dashed #ccc
+		height: 25px
+	.timeline__item:last-child,
+	.timeline__item:nth-last-child(2) .timeline__content::before,
+	.timeline__item:not(:last-child)::after,
+	.timeline__arrows-box
+		display: none
+	.timeline__date
+		bottom: -15px
+		color: $accent-color
+	.timeline__item:nth-child(even) .timeline__date
+		top: initial
+		bottom: -15px
+	.basic-form
+		grid-template-columns: 1fr
+		justify-items: start
+		grid-template-areas: "title" "input1" "input2" "textarea" "btn"
+
+@media only screen and (max-width : 400px)
+	.info
+		grid-template-columns: 1fr
+	.info__item:nth-child(3), .info__item:nth-child(2)
+		grid-column: 1 / 2
+	.all-world
+		max-width: 100%
+		grid-template-columns: repeat(2, 1fr)
+	.blog__item
+		grid-template-columns: 1fr
+	.blog__image
+		min-height: 200px
+	.blog__content::before
+		display: none
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
